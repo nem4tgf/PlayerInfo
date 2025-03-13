@@ -86,7 +86,6 @@ public class PlayerServlet extends HttpServlet {
                 PreparedStatement psPlayer = conn.prepareStatement(deletePlayerQuery);
                 psPlayer.setInt(1, Integer.parseInt(id));
                 psPlayer.executeUpdate();
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -94,7 +93,7 @@ public class PlayerServlet extends HttpServlet {
             return;
         }
 
-        // Display list of players
+        // Always load players list
         List<PlayerIndex> playerList = new ArrayList<>();
         try (Connection conn = DBConnection.getConnection()) {
             String query = "SELECT pi.id, p.player_id, p.name, p.age, i.name, pi.value " +
@@ -117,6 +116,7 @@ public class PlayerServlet extends HttpServlet {
         request.setAttribute("playerList", playerList);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
+
 
 
     private int getIndexId(Connection conn, String indexName) throws SQLException {
