@@ -60,7 +60,8 @@ public class PlayerServlet extends HttpServlet {
             String query = "SELECT pi.id, p.name, p.age, i.name, pi.value " +
                     "FROM player_index pi " +
                     "JOIN player p ON pi.player_id = p.player_id " +
-                    "JOIN indexer i ON pi.index_id = i.index_id";
+                    "JOIN indexer i ON pi.index_id = i.index_id " +
+                    "ORDER BY pi.id ASC";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 

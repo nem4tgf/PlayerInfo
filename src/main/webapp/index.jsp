@@ -99,7 +99,8 @@
             <td>${player.value}</td>
             <td>
                 <a href="edit?id=${player.id}">✏️</a>
-                <a href="delete?id=${player.id}">🗑️</a>
+                <a href="playerServlet?action=delete&id=${player.id}">🗑️</a>
+
             </td>
         </tr>
     </c:forEach>
