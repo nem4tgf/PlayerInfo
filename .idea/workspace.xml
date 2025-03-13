@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b1c048-f12e-4411-a350-c9c05217ffd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webcomponent/controller/PlayerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webcomponent/controller/PlayerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webcomponent/model/PlayerIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webcomponent/model/PlayerIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741831196020</updated>
       <workItem from="1741831197116" duration="1246000" />
-      <workItem from="1741832494570" duration="1819000" />
+      <workItem from="1741832494570" duration="2474000" />
     </task>
     <servers />
   </component>

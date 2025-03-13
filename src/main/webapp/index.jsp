@@ -67,15 +67,16 @@
 <h2>Player Information</h2>
 
 <form action="playerServlet" method="post">
-    <input type="text" name="player_name" placeholder="Player name" required>
-    <input type="number" name="player_age" placeholder="Player age" required>
-    <select name="index_name">
+    <input type="hidden" name="player_id" id="player_id">
+    <input type="text" name="player_name" id="player_name" placeholder="Player name" required>
+    <input type="number" name="player_age" id="player_age" placeholder="Player age" required>
+    <select name="index_name" id="index_name">
         <option value="speed">Speed</option>
         <option value="strength">Strength</option>
         <option value="accurate">Accurate</option>
     </select>
-    <input type="number" name="value" placeholder="Value" required>
-    <button type="submit">Add</button>
+    <input type="number" name="value" id="value" placeholder="Value" required>
+    <button type="submit">Save</button>
 </form>
 
 <table>
@@ -98,14 +99,24 @@
             <td>${player.indexName}</td>
             <td>${player.value}</td>
             <td>
-                <a href="edit?id=${player.id}">✏️</a>
-                <a href="playerServlet?action=delete&id=${player.id}">🗑️</a>
-
+                <button onclick="editPlayer('${player.id}', '${player.playerName}', '${player.playerAge}', '${player.indexName}', '${player.value}')">✏️</button>
+                <a href="playerServlet?action=delete&id=${player.id}" onclick="return confirm('Are you sure?')">🗑️</a>
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+
+<script>
+    function editPlayer(id, name, age, index, value) {
+        document.getElementById("player_id").value = id;
+        document.getElementById("player_name").value = name;
+        document.getElementById("player_age").value = age;
+        document.getElementById("index_name").value = index;
+        document.getElementById("value").value = value;
+    }
+</script>
+
 
 <footer>Số 8, Tôn Thất Thuyết, Cầu Giấy, Hà Nội</footer>
 

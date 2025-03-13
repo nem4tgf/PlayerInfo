@@ -7,7 +7,7 @@ public class PlayerIndex {
     private String indexName;
     private float value;
 
-    public PlayerIndex(int id, String playerName, String playerAge, String indexName, float value) {
+    public PlayerIndex(int id, int anInt, String playerName, String playerAge, String indexName, float value) {
         this.id = id;
         this.playerName = playerName;
         this.playerAge = playerAge;
